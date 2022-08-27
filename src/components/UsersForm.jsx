@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSquareXmark } from '@fortawesome/free-solid-svg-icons'
+import { faSquareXmark, faLock, faUser, faEnvelope, faCalendarDay, } from '@fortawesome/free-solid-svg-icons'
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import { } from '@fortawesome/free-regular-svg-icons';
 
 const defaultValues = {
   first_name: "",
@@ -37,23 +38,23 @@ const UsersForm = ({createUsers, updateUserInfo, updateUsers, setUpdateUserInfo,
       <h2>{updateUserInfo ? "Update user information" : "Create new user"}</h2>
       <ul>
         <li>
-          <label htmlFor="first_name">Firs name: </label>
+          <label htmlFor="first_name"><FontAwesomeIcon icon={faUser} /> </label>
           <input {...register("first_name")} id="first_name" type="text" placeholder='First name'/>
         </li>
         <li>
-          <label htmlFor="last_name">Last name: </label>
+          <label htmlFor="last_name"><FontAwesomeIcon icon={faUser} /> </label>
           <input {...register("last_name")} id="last_name" type="text" placeholder='Last name'/>
         </li>
         <li>
-          <label htmlFor="email">Email: </label>
+          <label htmlFor="email"><FontAwesomeIcon icon={faEnvelope} /> </label>
           <input {...register("email")} id="email" type="email" placeholder='Email'/>
         </li>
         <li>
-          <label htmlFor="password">Password: </label>
+          <label htmlFor="password"><FontAwesomeIcon icon={faLock} /> </label>
           <input {...register("password")} id="password" type="text" placeholder='Password'/>
         </li>
         <li>
-          <label htmlFor="birthday">Birthday: </label>
+          <label htmlFor="birthday"><FontAwesomeIcon icon={faCalendarDay} /> </label>
           <input {...register("birthday")} id="birthday" type="text" placeholder='YYYY-MM-DD'/>
         </li>
       </ul>

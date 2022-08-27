@@ -3,7 +3,7 @@
 }
 
 .users__header-title {
-  text-align: center
+  text-align: center;
 }
 
 .users__btn-close-form {
@@ -78,6 +78,11 @@
   padding: 22px;
   border: 1px solid rgba(77, 12, 12, 0.6);
   position: relative;
+}
+
+.user-card:hover {
+  background-color: rgba(77, 12, 12, 0.185);
+  box-shadow:  rgb(26, 16, 16) 0 10px 25px;
 }
 
 .card__btn-delete {
